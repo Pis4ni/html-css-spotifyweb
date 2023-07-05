@@ -3,6 +3,20 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Nunito', sans-serif;;
+}
+img{
+    width: 100%;
+}
+ul{
+
+    list-style-type: none;
+}
+h3{
+    font-size: 1.1rem;
+    font-weight: 900;
+}
 /* !###########    ############# */
 
 /* !###########  DEBUG  ############# */
@@ -23,12 +37,15 @@ main{
 }
 
 nav{
-    background-color: #fffa9a;
+    background-color: #000;
     border: 1px dashed #ff9c22;
     
-    width: 200px;
+    width: 250px;
     height: 100%;
+    padding: 1rem;
 
+    overflow: auto;
+    
 }
 
 #main-content{
@@ -56,4 +73,91 @@ header{
 .flex{
     display: flex;
 }
+.between{
+    justify-content: space-between;
+}
+.switch{
+    flex-direction: column;
+}
+/* !###########  SPECIFIC  ############# */
+
+/* * navbar */
+.logo{
+    width: 120px;
+    margin-bottom: 1rem;
+}
+.plus-btn{
+    background-color:#a3a3a3;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 .5rem 0 0;
+    display: inline-block;
+    color: #000;
+}
+.playlists{
+    color: #707070;
+    padding-bottom: 50px;
+}
+.playlists h3{
+    color: #fff;
+    margin: 1rem 0 .5rem 0;
+}
+
+.playlist{
+    padding: .5rem 0;
+}
+
+nav ul li svg{
+    width: 2rem;
+    margin-right: .5rem;
+}
+nav ul li{
+    color:#707070;
+    padding-left: 1rem;
+    margin-left: -1rem;
+    line-height: 2rem;
+    display: flex;
+    
+}
+nav ul li:hover{
+    box-shadow: inset 5px 0px 0 0px #00ff00;
+    color:#fff;
+}
+.download{
+    color: #a3a3a3;
+    border-bottom: 1px solid #707070;
+}
+.download svg{
+    width: 1rem;
+    margin-right: .5rem;
+}
+.profile{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    margin-top: auto;
+}
+.profile>*{
+    padding: .5rem 0
+}
+.pro-pic{
+    border-radius: 50%;
+    background-color: #a3a3a3;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    margin-right: .5rem;
+}
+.pro-name{
+    color: #a3a3a3;
+    font-weight: 900;
+}
+
+
 
