@@ -86,7 +86,7 @@ main{
     height: 100%;
     padding: 1rem;
 
-    /* overflow: auto; */
+    overflow: auto;
     max-height: calc(100vh - 100px);
     
 }
@@ -98,6 +98,7 @@ main{
     height: 100%;
 
     overflow-y: auto;
+    overflow-x:hidden;
 }
 
 header{
@@ -112,6 +113,8 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    z-index: 10;
 }
 
 /* !###########  UTILS  ############# */
@@ -136,9 +139,10 @@ header{
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 .col{
-    width: calc((100% - 12rem) / 6);
+    width: calc((100% - 10rem) / 6);
 }
 
 /* !###########  SPECIFIC  ############# */
@@ -177,7 +181,7 @@ header{
 }
 .scroll{
     overflow-y: auto;
-    height:calc(100vh - 500px) ;
+    height:calc(100vh - 520px) ;
 
 }
 
@@ -221,11 +225,31 @@ header{
     height: 1.5rem;
     display: inline-block;
     margin-right: .5rem;
+    overflow: hidden;
 }
 .pro-name{
     color:  var(--col-2);
     font-weight: 900;
 }
+.unhide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    display: none;
+}
+
+.unhide i{
+    font-size: 1.5rem
+}
+.unhide svg{
+    width: 1.5rem;
+}
+.second-list{
+    margin-top: auto;
+}
+
 /** footer */
 
 .tumbnail{
@@ -358,10 +382,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #main-nav ul {
     display: flex;
+    flex-wrap: wrap;
+    align-items:center ;
+    justify-content: center;
 }
 
 #main-nav li{
@@ -442,4 +470,62 @@ section h2{
     overflow: hidden;
     border-radius: 50%;
 }
+/*main MEDIA MID TO TABLET  */
+@media only screen and (max-width: 900px){
+    .col{
+        width: calc(((100% - 10rem) / 5));
+    }
+}
 
+/*main MEDIA TABLET  */
+@media only screen and (max-width: 769px){
+    .col{
+        width: calc(((100% - 6rem) / 4));
+    }
+    :root{
+        /** txt sizing  */
+        --t-xsmall: .3rem;
+        --t-small: .6rem;
+        --t-normal: .8rem;
+        --t-big: 1.3rem;
+    }
+    
+
+}
+
+/*main MEDIA SMARTPHONE  */
+@media only screen and (max-width: 576px){
+    .col{
+        width: calc(((100% - 2rem) / 2));
+    }
+    #navigation{
+        width: fit-content
+    }
+    .unhide{
+        display: flex;
+        height: 100%;
+    }
+    #navigation>*:not(.unhide){
+        display: none;
+    }
+    section>h2,
+    section>h3{
+        max-width: 100%;
+    }
+}
+/*main MEDIA XXS */
+@media only screen and (max-width: 351px){
+    .col{
+        width: 100%
+    }
+    #navigation{
+        width: fit-content
+    }
+    .unhide{
+        display: flex;
+        height: 100%;
+    }
+    #navigation>*:not(.unhide){
+        display: none;
+    }
+}
