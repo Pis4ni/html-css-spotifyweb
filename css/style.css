@@ -432,7 +432,7 @@ section h2{
 }
 
 .overlay{
-    font-size: 5rem;
+    font-size: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -470,17 +470,29 @@ section h2{
     overflow: hidden;
     border-radius: 50%;
 }
+
+@media only screen and (max-width: 1200px){
+    .col{
+        width: calc(((100% - 8rem) / 5));
+    }
+    .overlay{
+        font-size: 3.5rem;    
+    }    
+}
+
 /*main MEDIA MID TO TABLET  */
 @media only screen and (max-width: 900px){
     .col{
-        width: calc(((100% - 10rem) / 5));
+        width: calc(((100% - 6rem) / 4));
+        
     }
+    
 }
 
 /*main MEDIA TABLET  */
 @media only screen and (max-width: 769px){
     .col{
-        width: calc(((100% - 6rem) / 4));
+        width: calc(((100% - 4rem) / 3));
     }
     :root{
         /** txt sizing  */
@@ -489,6 +501,10 @@ section h2{
         --t-normal: .8rem;
         --t-big: 1.3rem;
     }
+    .overlay{
+        font-size: 2.5rem;    
+    }  
+    
     
 
 }
@@ -518,6 +534,9 @@ section h2{
     .right{
         display: none;
     }
+    .overlay{
+        font-size: 3.5rem;    
+    }  
 }
 /*main MEDIA XXS */
 @media only screen and (max-width: 351px){
