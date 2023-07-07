@@ -310,7 +310,7 @@ header{
     font-size: var(--t-xsmall);
     font-weight: 800;
 }
-
+.volume-bar,
 .time-bar{
     display: inline-block;
     width: 50%;
@@ -320,6 +320,8 @@ header{
     border-radius: 1px;
     position: relative;
 }
+
+.volume-bar-prog,
 .time-bar-prog{
     display: inline-block;
     position: absolute;
@@ -329,9 +331,11 @@ header{
     right:0;
     background-color: var(--col-2);
 }
+.volume-bar:hover,
 .time-bar:hover {
     background-color:var(--col-4) ;
 }
+.volume-bar:hover .dot,
 .time-bar:hover .dot{
     display: block;
 }
@@ -359,22 +363,14 @@ header{
     align-items: center;
     color:  var(--col-1);
     width: 25%;
+    position: relative;
 }
 .right i{
     font-size: var(--t-small);
     margin: 0 .5rem;
 }
 
-.volume-bar{
-    display: inline-block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--col-2);
-    margin: 0 1rem;
-    box-shadow: inset 20px 0 0 ;
-    border-radius: 1px;
 
-}
 
 /** main content */
 
